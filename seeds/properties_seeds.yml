@@ -1,0 +1,5 @@
+seeds:
+  - name: sales
+    config:
+      full_refresh : true
+   
