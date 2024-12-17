@@ -1,0 +1,7 @@
+sources:
+  - name: source_practice
+    database: practice_db
+    schema: raw_schema
+    tables:
+      - name: payments
+      
