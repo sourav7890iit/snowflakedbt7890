@@ -40,6 +40,15 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
-    customer_stg:
-       +materialized: table
-       +transient : false
+    customer_stging:
+      +materialized: table
+      +transient: false
+      +database: DB_ECOMM_STG
+      +schema: STG_SCHEMA
+    customer_marts:
+      +materialized: table
+      +transient: false
+      +database: DB_ECOMM_FINAL
+      +schema: FINAL_SCHEMA
+
+    
