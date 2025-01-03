@@ -1,0 +1,10 @@
+sources:
+  - name: raw_sendgrid
+    description: "Source data from SendGrid"
+    tables:
+      - name: raw_customers
+        description: "Event webhook data from SendGrid"
+        external:
+          location: "@{{ var('s3_integration')['stage_name'] }}"
+          file_format: "{{ var('s3_integration')['file_type'] }}"
+          auto_ingest: true

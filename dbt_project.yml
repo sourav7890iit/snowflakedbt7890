@@ -51,4 +51,23 @@ models:
       +database: DB_ECOMM_FINAL
       +schema: FINAL_SCHEMA
 
+
+vars:
+  s3_integration:
+    integration_name: 's3_int_nw'
+    schema_name: 'raw_sales'
+    table_name: 'raw_customers'
+    pipe_name: 'raw_customer_pipe'
+    stage_name: 'STORAGE_INTE.STORGAE_INTE_STAGES.aws_s3_csv_nw'
+    s3_url: 's3://sourav-7890/unload_table/'
+    pattern_value : '.*raw_customers.*'
+    columns:
+      - name: ID
+        datatype : INTEGER
+      - name: FIRST_NAME
+        datatype : VARCHAR(100)
+      - name: LAST_NAME
+        datatype : VARCHAR(100)
+    file_type: 'csv'
+
     
