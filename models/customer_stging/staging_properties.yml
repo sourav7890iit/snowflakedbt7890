@@ -2,7 +2,9 @@ sources:
   - name: snowflake_raw_src
     database: DB_ECOMM
     schema: RAW_SALES
+    loader: snowpipe
     tables:
       - name: raw_customers
       - name: raw_orders
       - name: raw_payments
+      - name: dim_sales
